@@ -47,7 +47,7 @@ class Player:
 					exec(f'self.{titles[current].lower().replace(" ", "_").replace("losses", "loses")} = "{cell.string.strip().replace(" ", "")}"')
 					current += 1
 			self.days_spent_playing = soup.find("div", {"class": "spoiler-reveal"}).string.strip()[1:]
-			self.clan = soup.find("h4", {'class': 'mb-0'}).findChild('a')['href'][13:-10]
+			self.clan = soup.find("h4", {'class': 'mb-0'}).findChild('a')['href'][10:-10]
 			self.username = soup.find('h1', {'class': 'mb-0'}).string
 			if self.username == None: self.username = '**special characters**'
 			else: self.username = self.username.strip()
