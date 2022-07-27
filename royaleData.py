@@ -51,7 +51,7 @@ class Player:
 			self.username = soup.find('h1', {'class': 'mb-0'}).string
 			if self.username == None: self.username = '**special characters**'
 			else: self.username = self.username.strip()
-			if int(self.current_trophies) >= 4000:
+			if int(self.current_trophies) >= 5000:
 				self.arena = self.league
 				self.league = None
 		else: return 'Error 404.'
