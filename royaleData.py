@@ -58,7 +58,7 @@ class Player:
 class Clan:
 	def __init__(self, id) -> None:
 		self.tag = id
-	def spy(self, rtype: type):
+	def spy(self, rtype: type = list):
 		rlist = rtype == list
 		rdict = rtype == dict
 		response = requests.get(f'https://www.deckshop.pro/spy/clan/{self.tag}')
